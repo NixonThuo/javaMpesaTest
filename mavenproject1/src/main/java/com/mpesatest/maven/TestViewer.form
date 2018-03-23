@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<Form version="1.3" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JFrameFormInfo">
+  <Properties>
+    <Property name="defaultCloseOperation" type="int" value="3"/>
+  </Properties>
+  <SyntheticProperties>
+    <SyntheticProperty name="formSizePolicy" type="int" value="1"/>
+    <SyntheticProperty name="generateCenter" type="boolean" value="false"/>
+  </SyntheticProperties>
+  <AuxValues>
+    <AuxValue name="FormSettings_autoResourcing" type="java.lang.Integer" value="0"/>
+    <AuxValue name="FormSettings_autoSetComponentName" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_generateFQN" type="java.lang.Boolean" value="true"/>
+    <AuxValue name="FormSettings_generateMnemonicsCode" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_i18nAutoMode" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_layoutCodeTarget" type="java.lang.Integer" value="1"/>
+    <AuxValue name="FormSettings_listenerGenerationStyle" type="java.lang.Integer" value="0"/>
+    <AuxValue name="FormSettings_variablesLocal" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_variablesModifier" type="java.lang.Integer" value="2"/>
+  </AuxValues>
+
+  <Layout>
+    <DimensionLayout dim="0">
+      <Group type="103" groupAlignment="0" attributes="0">
+          <Group type="102" alignment="0" attributes="0">
+              <EmptySpace min="-2" pref="122" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                  <Component id="Btn_Lnmo_q" max="32767" attributes="0"/>
+                  <Component id="Btn_b2cReq" alignment="0" max="32767" attributes="0"/>
+                  <Component id="Btn_LnmO" alignment="0" max="32767" attributes="0"/>
+                  <Component id="Btn_tokenGen" alignment="0" max="32767" attributes="0"/>
+                  <Component id="Btn_reverse" alignment="0" max="32767" attributes="0"/>
+                  <Component id="Btn_ClbkTst" alignment="0" max="32767" attributes="0"/>
+                  <Component id="Btn_b2bReq" alignment="0" max="32767" attributes="0"/>
+                  <Component id="Btn_c2bReg" alignment="0" max="32767" attributes="0"/>
+                  <Component id="Btn_c2bSim" alignment="0" max="32767" attributes="0"/>
+                  <Component id="Btn_AccBal" alignment="0" max="32767" attributes="0"/>
+                  <Component id="Btn_transtatus" alignment="0" max="32767" attributes="0"/>
+                  <Component id="Btn_dbTest" max="32767" attributes="0"/>
+              </Group>
+              <EmptySpace min="-2" pref="31" max="-2" attributes="0"/>
+              <Component id="jScrollPane1" min="-2" pref="616" max="-2" attributes="0"/>
+              <EmptySpace pref="73" max="32767" attributes="0"/>
+          </Group>
+      </Group>
+    </DimensionLayout>
+    <DimensionLayout dim="1">
+      <Group type="103" groupAlignment="0" attributes="0">
+          <Group type="102" alignment="0" attributes="0">
+              <EmptySpace min="-2" pref="131" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" attributes="0">
+                      <Component id="Btn_b2cReq" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                      <Component id="Btn_LnmO" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="11" max="-2" attributes="0"/>
+                      <Component id="Btn_tokenGen" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="11" max="-2" attributes="0"/>
+                      <Component id="Btn_Lnmo_q" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                      <Component id="Btn_reverse" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                      <Component id="Btn_transtatus" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                      <Component id="Btn_AccBal" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                      <Component id="Btn_c2bSim" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                      <Component id="Btn_c2bReg" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                      <Component id="Btn_b2bReq" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                      <Component id="Btn_ClbkTst" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                      <Component id="Btn_dbTest" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <Component id="jScrollPane1" min="-2" pref="616" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace pref="66" max="32767" attributes="0"/>
+          </Group>
+      </Group>
+    </DimensionLayout>
+  </Layout>
+  <SubComponents>
+    <Component class="javax.swing.JButton" name="Btn_b2cReq">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="B2C Request"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Btn_b2cReqActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="Btn_LnmO">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Lipa Na Mpesa Online"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JButton" name="Btn_tokenGen">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Generate Access Token"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JButton" name="Btn_Lnmo_q">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Lipa Na Mpesa Online Query"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Btn_Lnmo_qActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="Btn_reverse">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Reversal"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JButton" name="Btn_transtatus">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Transaction Status"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JButton" name="Btn_AccBal">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Account Balance"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JButton" name="Btn_c2bSim">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="C2B Simulate"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JButton" name="Btn_c2bReg">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="C2B Registration"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JButton" name="Btn_b2bReq">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="B2B Request"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JButton" name="Btn_ClbkTst">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Callback URL Test"/>
+      </Properties>
+    </Component>
+    <Container class="javax.swing.JScrollPane" name="jScrollPane1">
+      <AuxValues>
+        <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
+      </AuxValues>
+
+      <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
+      <SubComponents>
+        <Component class="javax.swing.JTextArea" name="jTextArea1">
+          <Properties>
+            <Property name="columns" type="int" value="20"/>
+            <Property name="rows" type="int" value="5"/>
+          </Properties>
+        </Component>
+      </SubComponents>
+    </Container>
+    <Component class="javax.swing.JButton" name="Btn_dbTest">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="GCP DB Test"/>
+      </Properties>
+    </Component>
+  </SubComponents>
+</Form>
