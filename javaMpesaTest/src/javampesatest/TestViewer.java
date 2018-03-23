@@ -102,7 +102,7 @@ public TestViewer() throws IOException, JSONException{
                         +scCr+"\",\"CommandID\":\""+TREV_ID+"\",\"TransactionID\":\""
                         +TRANSACID+"\",\"Amount\":\""+AMT+"\",\"ReceiverParty\":\""
                         +NON_LNMO_SHORTCODE1+"\",\"RecieverIdentifierType\":\""
-                        +"11"+"\",\"ResultURL\":\""+CLBK_URL+"\",\"QueueTimeOutURL\":\""
+                        +"11"+"\",\"ResultURL\":\""+RESULT_URL+"\",\"QueueTimeOutURL\":\""
                         +CLBK_URL+"\",\"Remarks\":\""+RMKS+"\",\"Occasion\":\""
                         +OCCASS+"\"}";
                 
@@ -126,7 +126,7 @@ public TestViewer() throws IOException, JSONException{
                 String transtatReq =  "{\"Initiator\":\""+INITIATOR_SC1+"\",\"SecurityCredential\":\""
                         +scC+"\",\"CommandID\":\""+TSQ_ID+"\",\"TransactionID\":\""
                         +TRANSACID+"\",\"PartyA\":\""+TSTPHONE+"\",\"IdentifierType\":\""
-                        +PHONENO+"\",\"ResultURL\":\""+CLBK_URL+"\",\"QueueTimeOutURL\":\""
+                        +PHONENO+"\",\"ResultURL\":\""+RESULT_URL+"\",\"QueueTimeOutURL\":\""
                         +CLBK_URL+"\",\"Remarks\":\""+RMKS+"\",\"Occasion\":\""
                         +OCCASS+"\"}";
                 HttpReqs b2chtR = new HttpReqs();
@@ -151,7 +151,7 @@ public TestViewer() throws IOException, JSONException{
                         +sc+"\",\"CommandID\":\""+ACCBAL_ID+"\",\"PartyA\":\""+NON_LNMO_SHORTCODE1
                         +"\",\"IdentifierType\":\""+SHORTCODE+"\",\"Remarks\":\""
                         +RMKS+"\",\"QueueTimeOutURL\":\""+CLBK_URL+"\",\"ResultURL\":\""
-                        +CLBK_URL+"\"}";
+                        +RESULT_URL+"\"}";
                 
                 HttpReqs b2chtR = new HttpReqs();
                 JSONObject requestBody =b2chtR.postResponse(ACC_BAL_URL, header1, POSTHEADER2, acbalReq);
@@ -190,8 +190,8 @@ public TestViewer() throws IOException, JSONException{
                 String header1 = POSTHEADER1+token;
                 
                 String c2brReq =  "{\"ShortCode\":\""+NON_LNMO_SHORTCODE1+"\",\"ResponseType\":\""
-                        +RMKS+"\",\"ConfirmationURL\":\""+CLBK_URL+"\",\"ValidationURL\":\""
-                        +CLBK_URL+"\"}";
+                        +RMKS+"\",\"ConfirmationURL\":\""+CONFIRM_URL+"\",\"ValidationURL\":\""
+                        +VALID_URL+"\"}";
                 
                 HttpReqs c2brhtR = new HttpReqs();
                 JSONObject requestBody =c2brhtR.postResponse(C2B_REG_URL, header1, POSTHEADER2, c2brReq);
@@ -214,7 +214,7 @@ public TestViewer() throws IOException, JSONException{
                         +"\",\"CommandID\":\""+BTB_ID+"\",\"SenderIdentifierType\":\""+SHORTCODE
                         +"\",\"RecieverIdentifierType\":\""+SHORTCODE+"\",\"Amount\":\""+AMT+"\",\"PartyA\":\""
                         +NON_LNMO_SHORTCODE1+"\",\"PartyB\":\""+NON_LNMO_SHORTCODE2+"\",\"AccountReference\":\""
-                        +ACC_REF+"\",\"Remarks\":\""+RMKS+"\",\"QueueTimeOutURL\":\""+CLBK_URL+"\",\"ResultURL\":\""+CLBK_URL+"\"}";
+                        +ACC_REF+"\",\"Remarks\":\""+RMKS+"\",\"QueueTimeOutURL\":\""+CLBK_URL+"\",\"ResultURL\":\""+RESULT_URL+"\"}";
                 
                 HttpReqs b2bhtR = new HttpReqs();
                 JSONObject requestBody =b2bhtR.postResponse(B2B_REQ_URL, header1, POSTHEADER2, b2bReq);
@@ -226,7 +226,7 @@ public TestViewer() throws IOException, JSONException{
             }
         });
         
-        Btn_b2bReq.addActionListener((ActionEvent e) -> {
+        Btn_b2cReq.addActionListener((ActionEvent e) -> {
             try {
                 FreqMethods b2cR = new FreqMethods();
                 String token = b2cR.authTokenGen().getString("access_token");
@@ -237,7 +237,7 @@ public TestViewer() throws IOException, JSONException{
                 String b2cReq =  "{\"InitiatorName\":\""+INITIATOR_SC1+"\",\"SecurityCredential\": \""+securityCreden
                         +"\",\"CommandID\": \""+BSPAY_ID+"\",\"Amount\":\""+AMT+"\",\"PartyA\": \""
                         +NON_LNMO_SHORTCODE1+"\",\"PartyB\": \""+TSTPHONE+"\",\"Remarks\": \""+RMKS+"\",\"QueueTimeOutURL\": \""+CLBK_URL
-                        +"\",\"ResultURL\":\""+CLBK_URL+"\",\"Occassion\": \""+OCCASS+"\"}";
+                        +"\",\"ResultURL\":\""+RESULT_URL+"\",\"Occassion\": \""+OCCASS+"\"}";
                 
                 HttpReqs b2chtR = new HttpReqs();
                 JSONObject requestBody =b2chtR.postResponse(B2C_REQ_URL, header1, POSTHEADER2, b2cReq);
@@ -248,6 +248,28 @@ public TestViewer() throws IOException, JSONException{
                 Logger.getLogger(TestViewer.class.getName()).log(Level.SEVERE, null, ex);
             }
         });
+        Btn_ClbkTst.addActionListener((ActionEvent e) -> {
+            try {
+                String testHeader1 = "TestHeader1", testHeader2 = "TestHeader2";
+                HttpReqs htr = new HttpReqs();
+                //String testReq = "{\"Item1\", \"TestItem Orange\"\"Item2\", \"TestItem Banana\"\"Item3\", \"TestItem Mango\"\"Item4\", \"TestItem Ruby\"\"Item5\", \"TestItem Jet\"}";
+                JSONObject tstObj = new JSONObject();
+                tstObj.put("Item1", "TestItem Orange");
+                tstObj.put("Item2", "TestItem Banana");
+                tstObj.put("Item3", "TestItem Mango");
+                tstObj.put("Item4", "TestItem Ruby");
+                tstObj.put("Item5", "TestItem Jet");
+                String testReq1 = tstObj.toString();
+                
+                JSONObject tstResponse = htr.postResponse(CLBK_URL, POSTHEADER1+testHeader1, POSTHEADER2, testReq1);
+                String deres = tstResponse.toString();
+                jTextArea1.setText(deres);
+                System.out.println(deres);
+            } catch (JSONException | IOException ex) {
+                Logger.getLogger(TestViewer.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        });
+      
    }
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
@@ -265,6 +287,7 @@ public TestViewer() throws IOException, JSONException{
         Btn_b2cReq = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTextArea1 = new javax.swing.JTextArea();
+        Btn_ClbkTst = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -292,6 +315,8 @@ public TestViewer() throws IOException, JSONException{
         jTextArea1.setRows(5);
         jScrollPane1.setViewportView(jTextArea1);
 
+        Btn_ClbkTst.setText("CallBack URL Test");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -308,7 +333,8 @@ public TestViewer() throws IOException, JSONException{
                     .addComponent(Btn_c2bSim, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(Btn_c2bReg, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(Btn_b2bReq, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(Btn_b2cReq, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(Btn_b2cReq, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(Btn_ClbkTst, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGap(30, 30, 30)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 423, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(60, 60, 60))
@@ -338,7 +364,9 @@ public TestViewer() throws IOException, JSONException{
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(Btn_b2bReq)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(Btn_b2cReq)))
+                        .addComponent(Btn_b2cReq)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(Btn_ClbkTst)))
                 .addContainerGap(41, Short.MAX_VALUE))
         );
 
@@ -384,6 +412,7 @@ public TestViewer() throws IOException, JSONException{
     
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton Btn_AccBal;
+    private javax.swing.JButton Btn_ClbkTst;
     private javax.swing.JButton Btn_LnmO;
     private javax.swing.JButton Btn_Lnmo_q;
     private javax.swing.JButton Btn_b2bReq;

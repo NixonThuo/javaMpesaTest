@@ -65,9 +65,10 @@ public interface Constants {
         TSTPHONE = "254729838302",//can change 
         AMT="1", //can change
         CLBK_URL="http://dmstst.munshiram.com:56518/callback.jsp",
-        VALID_URL="",
+        VALID_URL="http://dmstst.munshiram.com:56518/validc2b.jsp",
         PASSKEY = "bfb279f9aa9bdbcf158e97dd71a467cd2e0c893059b10f78e6b72ada1ed2c919",
-        CONFIRM_URL="",
+        CONFIRM_URL="http://dmstst.munshiram.com:56518/confirmc2b.jsp",
+        RESULT_URL="http://dmstst.munshiram.com:56518/mresult.jsp",
         FILEPATH="C:\\Users\\DEVWK008\\Documents\\NetBeansProjects\\Timestamp\\Files\\cert.cer",
         ACC_REF="TestAccount", //can change
         OCCASS = "TestOccassion",
