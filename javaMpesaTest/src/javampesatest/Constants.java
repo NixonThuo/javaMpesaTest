@@ -24,6 +24,13 @@ public interface Constants {
         ACC_BAL_URL="https://sandbox.safaricom.co.ke/mpesa/accountbalance/v1/query",
         TRANSTATUS_URL="https://sandbox.safaricom.co.ke/mpesa/transactionstatus/v1/query",
         REVERS_URL="https://sandbox.safaricom.co.ke/mpesa/reversal/v1/request",
+        CLBK_URL="http://dmstst.munshiram.com:56518/callback.jsp",
+        VALID_URL="http://192.168.3.103:8080/MobileApp/validc2b.jsp",
+        PASSKEY = "bfb279f9aa9bdbcf158e97dd71a467cd2e0c893059b10f78e6b72ada1ed2c919",
+        CONFIRM_URL="http://192.168.3.103:8080/MobileApp/confirmc2b.jsp",
+        RESULT_URL="http://dmstst.munshiram.com:56518/mresult.jsp",
+        B2CRESULT_URL = "http://192.168.3.103:8080/MobileApp/b2cresult.jsp",
+        LNMOCALLBACK_URL = "http://192.168.3.103:8080/MobileApp/lnmocallback.jsp",
             //CommandIDs
         BG_ID="BusinessBuyGoods",
         PB_ID="BusinessPayBill",
@@ -38,7 +45,7 @@ public interface Constants {
         BSPAY_ID="BusinessPayment",
         SALPAY_ID="SalaryPayment",
         TREV_ID="TransactionReversal",
-            TRANSACID="MCK2D9XSVI",
+        TRANSACID="MCK2D9XSVI",
             //Identifier Types
             /*
                 1 - MSISDN
@@ -64,12 +71,8 @@ public interface Constants {
         SEC_CRED_SC1 = "451reset",RMKS="Testing Transaction",
         TSTPHONE = "254729838302",//can change 
         AMT="1", //can change
-        CLBK_URL="http://dmstst.munshiram.com:56518/callback.jsp",
-        VALID_URL="http://dmstst.munshiram.com:56518/validc2b.jsp",
-        PASSKEY = "bfb279f9aa9bdbcf158e97dd71a467cd2e0c893059b10f78e6b72ada1ed2c919",
-        CONFIRM_URL="http://dmstst.munshiram.com:56518/confirmc2b.jsp",
-        RESULT_URL="http://dmstst.munshiram.com:56518/mresult.jsp",
-        FILEPATH="C:\\Users\\DEVWK008\\Documents\\NetBeansProjects\\Timestamp\\Files\\cert.cer",
+        //FILEPATH="C:\\Users\\DEVWK008\\Documents\\NetBeansProjects\\Timestamp\\Files\\cert.cer",
+        FILEPATH="/opt/mobileapp/webapps/MobileApp/WEB-INF/lib/Files/mpesasandbx.cer",
         ACC_REF="TestAccount", //can change
         OCCASS = "TestOccassion",
         TRANS_DESC = "TestTransaction"; //can change

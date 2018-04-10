@@ -45,7 +45,7 @@ public class FreqMethods implements Constants{
     
     public String passKeyEncode() throws UnsupportedEncodingException{
         String ts = this.timestampGen();
-        String passkey=BSS_CODE+":"+PASSKEY+":"+ts;
+        String passkey=BSS_CODE+PASSKEY+ts;
         byte[] testByte = Base64.getEncoder().encode(passkey.getBytes(BASE64_ENC));
         String Passwd = new String(testByte);
         return Passwd;
